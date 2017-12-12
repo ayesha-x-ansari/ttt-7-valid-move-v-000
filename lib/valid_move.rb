@@ -14,8 +14,10 @@ end
 def position_taken?(board, index)
   taken = nil
    if (board[index] ==  " " || board[index] == "" || board[index] == nil)
+     puts "false"
      taken = false
    elsif (board[index] ==  "O" || board[index] == "X")
      taken = true
    end
 end
+valid_move?(board, 100)
