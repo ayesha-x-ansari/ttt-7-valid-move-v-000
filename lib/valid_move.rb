@@ -18,7 +18,7 @@ def position_taken?(board, index)
   puts board[index]
    if (board[index] ==  " " || board[index] == "" || board[index] == nil)
      puts "true"
-     taken = falsey
+     taken = true
    elsif (board[index] ==  "O" || board[index] == "X")
      taken = false
    else
