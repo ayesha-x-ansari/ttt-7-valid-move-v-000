@@ -3,9 +3,9 @@ board = ["X", " ", " ", " ", " ", " ", " ", " ", " "]
 
 
 def valid_move?(board, index)
-  if position_taken?(board, index)
+  if position_taken?(board, index) &&  index.between (0, 8)
         puts  "valid move"
-        return true
+        return truthiness
   else
         return false
   end
@@ -18,13 +18,10 @@ def position_taken?(board, index)
   puts board[index]
    if (board[index] ==  " " || board[index] == "" || board[index] == nil)
      puts "true"
-     taken = true
+     taken = falsey
    elsif (board[index] ==  "O" || board[index] == "X")
      taken = false
    else
      nil
    end
 end
-board = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
-index = 4
-valid_move?(board, index)
