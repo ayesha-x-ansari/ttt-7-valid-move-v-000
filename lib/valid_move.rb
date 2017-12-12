@@ -17,10 +17,10 @@ def position_taken?(board, index)
   taken = nil
   puts board[index]
    if (board[index] ==  " " || board[index] == "" || board[index] == nil)
-     puts "false"
-     taken = false
-   elsif (board[index] ==  "O" || board[index] == "X")
+     puts "true"
      taken = true
+   elsif (board[index] ==  "O" || board[index] == "X")
+     taken = false
    else
      nil
    end
