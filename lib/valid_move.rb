@@ -25,4 +25,6 @@ def position_taken?(board, index)
      nil
    end
 end
-valid_move?(board, 100)
+board = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
+index = 4
+valid_move?(board, index)
