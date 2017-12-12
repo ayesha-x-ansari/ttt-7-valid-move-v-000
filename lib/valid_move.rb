@@ -1,5 +1,5 @@
 # code your #valid_move? method here
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+board = ["X", " ", " ", " ", " ", " ", " ", " ", " "]
 index = 0
 
 def valid_move?(board, index)
@@ -12,12 +12,15 @@ end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 def position_taken?(board, index)
+  index -= 1
   taken = nil
    if (board[index] ==  " " || board[index] == "" || board[index] == nil)
      puts "false"
      taken = false
    elsif (board[index] ==  "O" || board[index] == "X")
      taken = true
+   else
+     nil
    end
 end
 valid_move?(board, 100)
